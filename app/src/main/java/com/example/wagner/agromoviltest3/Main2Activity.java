@@ -21,6 +21,7 @@ public class Main2Activity extends AppCompatActivity {
         final Button button = findViewById(R.id.button_cal_next);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
                 startActivity(new Intent(Main2Activity.this, available_transporters.class));
             }
         });

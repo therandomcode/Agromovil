@@ -25,13 +25,13 @@ public class available_transporters extends AppCompatActivity {
 
         // Creating dummy data
         Hashtable<Integer, String> hash1 = new Hashtable<>();
-        for (int i = 10; i < 13; i++) hash1.put(i, "AM");
+        for (int i = 11; i < 16; i++) hash1.put(i, "AM");
         Hashtable<Integer, String> hash2 = new Hashtable<>();
-        for (int i = 1; i < 15; i++) hash2.put(i, "ALL DAY");
+        for (int i = 6; i < 16; i++) hash2.put(i, "ALL DAY");
         Hashtable<Integer, String> hash3 = new Hashtable<>();
-        for (int i = 1; i < 3; i++) hash3.put(i, "AM");
-        for (int i = 3; i < 6; i++) hash3.put(i, "PM");
-        for (int i = 6; i < 11; i++) hash3.put(i, "ALL DAY");
+        for (int i = 1; i < 6; i++) hash3.put(i, "AM");
+        for (int i = 6; i < 11; i++) hash3.put(i, "PM");
+        for (int i = 11; i < 16; i++) hash3.put(i, "ALL DAY");
 
         // Delete all rows
         List<Transporter> Transporters = db.getAllTransporters();
@@ -50,14 +50,16 @@ public class available_transporters extends AppCompatActivity {
 //        int date = getCurrentDate();
 //        String time = getCurrentTime();
 
-        int date = 10;
-        String time = "AM";
+
+        int date = 8;
+        String time = "PM";
         int counter = 0;
         int backcounter = 0;
         String[] names = new String[3];
         String[] addresses2 = new String[3];
         String[] car_make = new String[3];
         Integer[] imgid_alist = new Integer[3];
+
 
 
         Transporters = db.getAllTransporters();
@@ -70,8 +72,9 @@ public class available_transporters extends AppCompatActivity {
                 counter++;
             }
             else {
-                names[2 - backcounter] = " ";
-                addresses2[2 - backcounter] = " ";
+                //names[2 - backcounter] = " ";
+                names[2 - backcounter] = transporter.getFirstName() + " " + transporter.getLastName();
+                addresses2[2 - backcounter] = "unavailable";
                 car_make[2 - backcounter] = " ";
                 imgid_alist[2 - backcounter] = Integer.valueOf(transporter.getImgid());;
                 backcounter++;
