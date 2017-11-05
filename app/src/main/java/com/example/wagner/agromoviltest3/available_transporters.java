@@ -1,6 +1,8 @@
 package com.example.wagner.agromoviltest3;
+        import android.content.Intent;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
+        import android.util.Log;
         import android.widget.ListView;
 
         import java.util.Hashtable;
@@ -10,6 +12,8 @@ package com.example.wagner.agromoviltest3;
 
 public class available_transporters extends AppCompatActivity {
 
+    int theDate;
+    String time;
     ListView lst;
     DBHandler db = new DBHandler(this);
     String[] transportername = {"a", "b", "c"};
@@ -22,6 +26,30 @@ public class available_transporters extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_available_transporters);
+
+        Intent myIntent = getIntent();
+        if (myIntent != null){
+            Bundle myBundle = getIntent().getExtras();
+            theDate = myBundle.getInt("myDate");
+            //This is just to debut in catlog; to be removed later.
+            //To reference the integer version, which is what we want, use variable theDate.
+            String stringDate = String.valueOf(theDate);
+            Log.d("the day selected:", stringDate);
+
+            boolean isMorningFree = myBundle.getBoolean("myAM");
+            boolean isAfternoonFree = myBundle.getBoolean("myPM");
+            if (isMorningFree && isAfternoonFree) {
+                time = "ALL DAY";
+            } else if (isMorningFree) {
+                time = "AM";
+            } else if (isAfternoonFree) {
+                time = "PM";
+            } else {
+                //Should never get to this case.
+                time = "NEVER";
+            }
+
+        }
 
         // Creating dummy data
         Hashtable<Integer, String> hash1 = new Hashtable<>();
@@ -51,8 +79,8 @@ public class available_transporters extends AppCompatActivity {
 //        String time = getCurrentTime();
 
 
-        int date = 8;
-        String time = "PM";
+        int date = theDate;
+        //time is set
         int counter = 0;
         int backcounter = 0;
         String[] names = new String[3];

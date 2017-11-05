@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"></Button>
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/amCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/datePicker2" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/pmCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
@@ -50,7 +50,7 @@
         android:layout_marginTop="8dp"
         android:text="PM"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintStart_toEndOf="@+id/amCheckBox"
         app:layout_constraintTop_toBottomOf="@+id/datePicker2" />
 
     <TextView
