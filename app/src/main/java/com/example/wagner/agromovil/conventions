@@ -1,0 +1,8 @@
+Conventions
+
+CamelCase is preferred to the underscore_system
+
+A. Buttons
+userScreenPurposeButton
+example: the "Profile" button on the farmer's home screen is farmerHomeProfileButton
+

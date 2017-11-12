@@ -1,4 +1,4 @@
-#Thu Nov 09 09:24:07 EST 2017
+#Sat Nov 11 14:46:28 EST 2017
 base.0=C\:\\Users\\Wagner\\Documents\\GitHub\\Agromovil\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
 file.0=C\:\\Users\\Wagner\\Documents\\GitHub\\Agromovil\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

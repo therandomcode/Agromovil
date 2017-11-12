@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.wagner.agromoviltest3"
+    package="com.example.wagner.agromovil"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -15,20 +15,27 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.example.wagner.agromoviltest3.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+        <activity android:name="com.example.wagner.agromovil.FarmerHomeScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.wagner.agromoviltest3.Main2Activity" />
-        <activity android:name="com.example.wagner.agromoviltest3.available_transporters" />
+        <activity android:name="com.example.wagner.agromovil.FarmerBeginRequestPickup" />
+        <activity android:name="com.example.wagner.agromovil.FarmerEditProfile" />
+        <activity android:name="com.example.wagner.agromovil.FarmerViewHistory" />
+        <activity android:name="com.example.wagner.agromovil.FarmerViewHistoryDetail" />
+        <activity android:name="com.example.wagner.agromovil.FarmerRequestPickupPickDate" />
+        <activity android:name="com.example.wagner.agromovil.FarmerRequestPickupSetPickupLocation" />
+        <activity android:name="com.example.wagner.agromovil.FarmerRequestPickupSetPickupLocationType" />
+        <activity android:name="com.example.wagner.agromovil.FarmerRequestPickupSetDropoffLocation" />
+        <activity android:name="com.example.wagner.agromovil.FarmerRequestPickupChooseTransporter" />
+        <activity android:name="com.example.wagner.agromovil.FarmerRequestPickupViewTransporterDetails" />
+        <activity android:name="com.example.wagner.agromovil.FarmerRequestPickupEnterPayment" />
+        <activity android:name="com.example.wagner.agromovil.FarmerRequestPickupReviewOrder" />
+        <activity android:name="com.example.wagner.agromovil.FarmerRequestPickupOrderConfirmation" />
 
         <meta-data
             android:name="android.support.VERSION"
